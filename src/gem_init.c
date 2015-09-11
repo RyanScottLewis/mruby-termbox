@@ -59,7 +59,7 @@ mrb_value mrb_mruby_termbox_init_module_method( mrb_state *mrb, mrb_value self )
       mrb_raise( mrb, mrb_class_get_under( mrb, mrb_mruby_termbox_module, "PipeTrapError" ), "Pipe trap error" );
     }
 
-    if( code > -3 )
+    if( code > -3 ) // TODO: I don't think this makes sense
       mrb_raise( mrb, mrb_class_get_under( mrb, mrb_mruby_termbox_module, "Error" ), "Could not be initialized" );
   }
 
